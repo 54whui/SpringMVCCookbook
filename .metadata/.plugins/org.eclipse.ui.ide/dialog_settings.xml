@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/leo/Documents/workspace/zipcloud-parent/zipcloud-core"/>
+			<item value="/Users/leo/Documents/workspace/zipcloud-parent"/>
+			<item value="/Users/leo/Documents/workspace/cloudstreetmarket-parent/cloudstreetmarket-webapp"/>
+			<item value="/Users/leo/Documents/workspace/cloudstreetmarket-parent/cloudstreetmarket-core"/>
+			<item value="/Users/leo/Documents/workspace/cloudstreetmarket-parent/cloudstreetmarket-api"/>
+			<item value="/Users/leo/Documents/workspace/cloudstreetmarket-parent"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+</section>
