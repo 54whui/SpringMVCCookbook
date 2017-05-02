@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Tue May 02 19:30:34 CST 2017
+org.eclipse.jst.j2ee.server\:zipcloud-core=WEB-INF/lib/zipcloud-core-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.jee.server\:/binary\:/Users/leo/.m2/repository/org/springframework/spring-web/5.0.0.BUILD-SNAPSHOT/spring-web-5.0.0.BUILD-SNAPSHOT.jar=WEB-INF/lib/spring-web-5.0.0.BUILD-SNAPSHOT.jar

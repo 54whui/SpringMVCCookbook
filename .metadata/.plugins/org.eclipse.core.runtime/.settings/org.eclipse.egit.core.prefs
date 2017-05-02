@@ -1,5 +1,5 @@
-GitRepositoriesView.GitDirectories=
-GitRepositoriesView.GitDirectories.relative=
+GitRepositoriesView.GitDirectories=/Users/leo/Documents/workspace/.git\:
+GitRepositoriesView.GitDirectories.relative=.git\:
 RepositorySearchDialogSearchPath=/Users/leo/Documents/workspace/.git
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
