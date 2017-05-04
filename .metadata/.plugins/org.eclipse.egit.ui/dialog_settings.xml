@@ -2,10 +2,12 @@
 <section name="Workbench">
 	<item value="true" key="CommitDialog.showUntracked"/>
 	<list key="CommitDialog.authorValues">
+		<item value="spring.54whui.com &lt;whuigithub@163.com&gt;"/>
 		<item value="leo &lt;leo@192.168.5.123&gt;"/>
 		<item value="leo &lt;leo@leos-mbp.lan&gt;"/>
 	</list>
 	<list key="CommitDialog.committerValues">
+		<item value="spring.54whui.com &lt;whuigithub@163.com&gt;"/>
 		<item value="leo &lt;leo@192.168.5.123&gt;"/>
 		<item value="leo &lt;leo@leos-mbp.lan&gt;"/>
 	</list>
@@ -33,8 +35,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
-		<item value="200,200" key="STAGING_SASH_FORM_WEIGHT"/>
+		<item value="500,500" key="STAGING_SASH_FORM_WEIGHT"/>
 		<item value="false" key="sortItemState"/>
-		<item value="200,200" key="HORIZONTAL_SASH_FORM_WEIGHT"/>
+		<item value="500,500" key="HORIZONTAL_SASH_FORM_WEIGHT"/>
 	</section>
 </section>

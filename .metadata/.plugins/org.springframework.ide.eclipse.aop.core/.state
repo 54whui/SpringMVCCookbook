@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="cloudstreetmarket-api"/>
-<aop-project name="zipcloud-core"/>
 <aop-project name="cloudstreetmarket-webapp"/>
 <aop-project name="cloudstreetmarket-core"/>
 </aop-reference-model>

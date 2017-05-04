@@ -26,6 +26,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	
+
 	<dependencyManagement>
 		<dependencies>
 			<!-- ZipCloud dependencies -->
@@ -159,6 +160,11 @@
 				<version>${java.uel.version}</version>
 				<scope>provided</scope>
 			</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet-api.version}</version>
+		</dependency>
 
 			<!-- Logging dependencies -->
 			<dependency>
@@ -193,8 +199,9 @@
 				<artifactId>commons-lang3</artifactId>
 				<version>${commons-lang3.version}</version>
 			</dependency>
+
 		</dependencies>
-	</dependencyManagement>
+</dependencyManagement>
 	
 	<repositories>
 	    <repository>

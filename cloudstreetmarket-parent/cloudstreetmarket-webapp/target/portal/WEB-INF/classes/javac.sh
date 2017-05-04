@@ -1,0 +1,1 @@
+/bin/sh -c cd /Users/leo/Documents/workspace/cloudstreetmarket-parent/cloudstreetmarket-webapp && /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/bin/javac @/Users/leo/Documents/workspace/cloudstreetmarket-parent/cloudstreetmarket-webapp/target/classes/org.codehaus.plexus.compiler.javac.JavacCompiler412995200923303594arguments

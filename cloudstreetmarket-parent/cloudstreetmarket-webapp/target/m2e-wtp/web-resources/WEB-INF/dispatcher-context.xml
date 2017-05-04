@@ -47,5 +47,4 @@
 		</property>
 		</bean> 
 	</mvc:interceptors>
-	
 </beans>

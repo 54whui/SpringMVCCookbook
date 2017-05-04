@@ -1,0 +1,5 @@
+package edu.zipcloud.cloudstreetmarket.core.dtos;
+
+public class MarketOverviewDTO {
+
+}

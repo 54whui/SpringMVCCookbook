@@ -1,0 +1,5 @@
+package edu.zipcloud.cloudstreetmarket.api.controllers;
+
+public class CloudstreetApiWCI {
+
+}
