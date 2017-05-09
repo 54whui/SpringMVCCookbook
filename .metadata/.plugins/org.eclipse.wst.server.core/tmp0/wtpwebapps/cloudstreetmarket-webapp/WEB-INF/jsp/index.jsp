@@ -14,6 +14,6 @@
   	<h1>
   		Well done ! 
   	</h1>
-  	<h3>You've completed the first chapter :)</h3>
+  	<h3>You've completed the first chapter :) jsp</h3>
   </body>
 </html>

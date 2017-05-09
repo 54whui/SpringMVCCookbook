@@ -8,6 +8,7 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="javax.servlet-api"/>
 			<item value="org.aspectj "/>
 			<item value="java.uel"/>
 			<item value="aspectjweaver"/>
@@ -15,7 +16,6 @@
 			<item value="spring-security-config"/>
 			<item value="flyway-maven-plugin"/>
 			<item value="rabbit"/>
-			<item value="jayway"/>
 		</list>
 		<list key="replacehistory">
 		</list>
