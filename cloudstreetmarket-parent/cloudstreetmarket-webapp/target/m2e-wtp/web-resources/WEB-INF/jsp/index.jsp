@@ -1,13 +1,15 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
 	<!-- start: Meta -->
 	<meta charset="utf-8">
-	<title>FreeME:BOOTSTRAP THEME by BootstrapMaster</title> 
-	<meta name="description" content="FreeME:Bootstrap Theme"/>
-	<meta name="keywords" content="Template, Theme, web, html5, css3" />
-	<meta name="author" content="Łukasz Holeczek from creativeLabs"/>
+	<title>Spring MVC: CloudST Market</title> 
+	<meta name="description" content="Spring MVC CookBook: Cloud Street Market"/>
+	<meta name="keywords" content="spring mvc, cookbook, packt publishing, microservices, angular.js" />
+	<meta name="author" content="Your name"/>
 	<!-- end: Meta -->
 	
 	<!-- start: Mobile Specific -->
@@ -53,11 +55,11 @@
 				<!--start: Row -->
 				<div class="row">
 					
-					<!--start: Logo -->
-					<div class="logo span4">
-						<a class="brand" href="#"><img src="img/logo.png"></a>
-					</div>
-					<!--end: Logo -->
+				<!--start: Logo -->
+				<div class="logo span4">
+				  CLOUD<span class="sub">ST</span><span>Market</span>
+				</div>
+				<!--end: Logo -->
 					
 					<!--start: Social Links -->
 					<div class="span8">
@@ -141,24 +143,13 @@
           				</a>
           				<div class="nav-collapse collapse">
             				<ul class="nav">
-              					<li class="active"><a href="index.html">Home</a></li>
-              					<li><a href="about.html">About</a></li>
-								<li><a href="services.html">Services</a></li>
-								<li><a href="pricing.html">Pricing</a></li>
-              					<li><a href="contact.html">Contact</a></li>
-              					<li class="dropdown">
-                					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                					<ul class="dropdown-menu">
-                  						<li><a href="#">Action</a></li>
-                  						<li><a href="#">Another action</a></li>
-                  						<li><a href="#">Something else here</a></li>
-                  						<li class="divider"></li>
-                  						<li class="nav-header">Nav header</li>
-                  						<li><a href="#">Separated link</a></li>
-                  						<li><a href="#">One more separated link</a></li>
-                					</ul>
-              					</li>
-            				</ul>
+							  <li class="active"><a href="index">Home</a></li>
+							  <li><a href="markets">Prices and markets</a></li>
+							  <li><a href="community">Community</a></li>
+							  <li><a href="sources">Sources</a></li>
+							  <li><a href="about">About</a></li>
+							  <li><a href="contact">Contact</a></li>
+							</ul>
           				</div>
         			</div>
       			</div>
@@ -170,90 +161,8 @@
 				
 		<!--start: Container -->
     	<div class="container">
-	
-			<!-- start: Flexslider -->
-			<div class="slider">
-			
-				<div class="flexslider">
-					<ul class="slides">
 
-						<li>
-							<img src="img/slider/slider1.jpg" alt="" />
-							<div class="slide-caption n hidden-phone">
-								<h3>This is a caption</h3>
-								<p>
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-								</p>
-							</div>
-						</li>
 
-						<li>
-							<img src="img/slider/slider2.jpg" alt="" />
-							<div class="slide-caption hidden-phone">
-								<h3>This is a caption</h3>
-								<p>
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-								</p>
-							</div>
-						</li>
-
-						<li>
-							<img src="img/slider/slider3.jpg" alt="" />
-						</li>
-
-					</ul>
-				</div>
-			
-			</div>
-			<!-- end: Flexslider -->
-
-      		<!-- start: Hero Unit - Main hero unit for a primary marketing message or call to action -->
-      		<div class="hero-unit">
-        		<p>
-					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
-				</p>
-        		<p><a class="btn btn-success btn-large">Learn more &raquo;</a></p>
-      		</div>
-			<!-- end: Hero Unit -->
-
-      		<!-- start: Row -->
-      		<div class="row">
-	
-        		<div class="span4">
-          			<div class="icons-box">
-						<i class="ico-ok circle big"></i>
-						<div class="title"><h3>Easy to use</h3></div>
-						<p>
-							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-						</p>
-						<div class="clear"></div>
-					</div>
-        		</div>
-
-        		<div class="span4">
-          			<div class="icons-box">
-						<i class="ico-ipad circle big"></i>
-						<div class="title"><h3>Responsive</h3></div>
-						<p>
-							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-						</p>
-						<div class="clear"></div>
-					</div>
-        		</div>
-
-        		<div class="span4">
-          			<div class="icons-box">
-						<i class="ico-heart circle big"></i>
-						<div class="title"><h3>User friendly</h3></div>
-						<p>
-							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-						</p>
-						<div class="clear"></div>
-					</div>
-        		</div>
-
-      		</div>
-			<!-- end: Row -->
       		
 			<hr>
 		
@@ -275,7 +184,9 @@
 		
 			</div>
 			<!-- end Clients List -->
-		
+		     <!-- start: Row -->
+      		<div class="row"></div>
+			<!-- end: Row -->
 			<hr>
 			
 			<!-- start: Row -->
@@ -351,64 +262,44 @@
     	<div class="container">		
 
       		<!-- start: Footer Menu -->
-			<div id="footer-menu" class="hidden-tablet hidden-phone">
-
-				<!-- start: Container -->
-				<div class="container">
-				
-					<!-- start: Row -->
-					<div class="row">
-
-						<!-- start: Footer Menu Logo -->
-						<div class="span1">
-							<div id="footer-menu-logo">
-								<a href="#"><img src="img/logo-footer-menu.png" alt="logo" /></a>
-							</div>
-						</div>
-						<!-- end: Footer Menu Logo -->
-
-						<!-- start: Footer Menu Links-->
-						<div class="span10">
-						
-							<div id="footer-menu-links">
-
-								<ul id="footer-nav">
-
-									<li><a href="index.html">Start</a></li>
-
-									<li><a href="about.html">About</a></li>
-
-									<li><a href="services.html">Services</a></li>
-
-									<li><a href="pricing.html">Pricing</a></li>
-								
-									<li><a href="contact.html">Contact</a></li>
-
-								</ul>
-
-							</div>
-						
-						</div>
-						<!-- end: Footer Menu Links-->
-
-						<!-- start: Footer Menu Back To Top -->
-						<div class="span1">
-							
-							<div id="footer-menu-back-to-top">
-								<a href="#"></a>
-							</div>
-					
-						</div>
-						<!-- end: Footer Menu Back To Top -->
-				
-					</div>
-					<!-- end: Row -->
-				
-				</div>
-				<!-- end: Container  -->	
-
-			</div>	
-			<!-- end: Footer Menu -->
+				<div id="footer-menu" class="hidden-tablet hidden-phone">
+				  <!-- start: Container -->
+				  <div class="container">
+				    <!-- start: Row -->
+				    <div class="row">
+				      <!-- start: Footer Menu Logo -->
+				      <div class="span1">
+				      <div class="logoSmall">CLOUD<span class="sub">ST</span><span>M!</span>
+				        </div>
+				        </div>
+				      <!-- end: Footer Menu Logo -->
+				      <!-- start: Footer Menu Links-->
+				      <div class="span10" >
+				      <div id="footer-menu-links">
+				      <ul id="footer-nav" style="margin-left:35pt;">
+				        <li><a href="index">Home</a></li>
+				        <li><a href="markets">Prices and markets</a></li>
+				      <li><a href="community">Community</a></li>
+				        <li><a href="sources">Sources</a></li>
+				        <li><a href="about">About</a></li>
+				        <li><a href="contact">Contact</a></li>
+				        </ul>
+				        </div>
+				        </div>
+				        <!-- end: Footer Menu Links-->
+				        <!-- start: Footer Menu Back To Top -->
+				        <div class="span1">
+				        <div id="footer-menu-back-to-top">
+				          <a href="#"></a>
+				          </div>
+				       </div>
+				        <!-- end: Footer Menu Back To Top -->
+				    </div>
+				    <!-- end: Row -->
+				    </div>
+				  <!-- end: Container  -->	
+				</div>	
+				<!-- end: Footer Menu -->
 
 			<!-- start: Footer -->
 			<div id="footer">
@@ -430,17 +321,15 @@
 						</div>
 						<!-- end: About -->
 
-						<!-- start: Photo Stream -->
-						<div class="span3">
-						
-							<h3>Photo Stream</h3>
-							<div class="flickr-widget">
-								<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=9&display=latest&size=s&layout=x&source=user&user=29609591@N08"></script>
-								<div class="clear"></div>
+						<!-- start: Leaderboard -->
+							<div class="span3">
+							  <h3>Leaderboard</h3>
+							  <div class="flickr-widget">
+							    <script type="text/javascript" src=""></script>
+							    <div class="clear"></div>
+							  </div>
 							</div>
-						
-						</div>
-						<!-- end: Photo Stream -->
+							<!-- end: Leaderboard -->
 
 				
 						<div class="span6">

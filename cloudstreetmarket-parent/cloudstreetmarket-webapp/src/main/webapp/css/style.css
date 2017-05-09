@@ -72,6 +72,28 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+/* add ===========*/
+.logo{
+  font-family: 'Droid Sans';	font-size: 24pt; color: 	#666; width:157pt; font-weight:bold; margin-top:18pt; 	margin-left:10pt; height:30pt;
+}
+.logo span{
+  position:relative;float:right; margin-top: 3pt;	font-weight:normal; font-family: 'Boogaloo'; font-	style:italic;	color:#89C236; padding-right: 3pt;
+}
+.logo .sub {
+  vertical-align: super;	font-style:normal;font-size: 16pt; font-family: 'Droid Sans';	font-weight:bold; position: absolute;	color: #888; 	margin:-4pt 0 -4pt 0;
+}
+.logoSmall{
+  font-family: 'Droid Sans';	font-size: 16pt; color: #888;width:80pt;	font-weight:bold; margin-top:10pt;height:20pt; margin-right:30pt;
+}
+.logoSmall span{
+  position:relative;	float:right; margin-top: 3pt;
+  font-weight:normal;font-family: 'Boogaloo';	font-style:italic;color: #89C236;
+}
+.logoSmall .sub {
+  vertical-align: super;
+  font-style:normal;	font-size: 10pt;font-family: 'Droid Sans';font-weight:bold;position: absolute; color: #666;margin:-2pt 0 -4pt 0;
+}
+
 /* Header
 =================================================================== */
 	
