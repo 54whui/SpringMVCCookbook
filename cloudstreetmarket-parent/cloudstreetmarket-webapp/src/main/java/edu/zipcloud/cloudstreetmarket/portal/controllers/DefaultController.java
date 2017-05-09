@@ -20,7 +20,7 @@ public class DefaultController extends CloudstreetWebAppWCI {
 	private ICommunityService communityService;
 	*/
 		
-@RequestMapping(value="/**", method={RequestMethod.GET,RequestMethod.HEAD})
+@RequestMapping(value="/*", method={RequestMethod.GET,RequestMethod.HEAD})
 	public String fallback(Model model) {
 		/*
 		model.addAttribute("dailyMarketActivity",  marketService.getLastDayMarketActivity("GDAXI"));
