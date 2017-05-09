@@ -1,16 +1,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="cloudStreetMarketApp">
 <head>
 
 	<!-- start: Meta -->
 	<meta charset="utf-8">
-	<title>Spring MVC: CloudST Market</title> 
-	<meta name="description" content="Spring MVC CookBook: Cloud Street Market"/>
-	<meta name="keywords" content="spring mvc, cookbook, packt publishing, microservices, angular.js" />
-	<meta name="author" content="Your name"/>
-	<!-- end: Meta -->
+	<title>FreeME:BOOTSTRAP THEME by BootstrapMaster</title> 
+	<meta name="description" content="FreeME:Bootstrap Theme"/>
+	<meta name="keywords" content="Template, Theme, web, html5, css3" />
+	<meta name="author" content="54whui" />
+	<!-- end:Meta -->
 	
 	<!-- start: Mobile Specific -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -28,6 +31,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<link href="css/FeedEk.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
@@ -47,20 +51,19 @@
 		
 		<!--start: Container -->
 		<div class="container">
-		
-		
+
 			<!--start: Header -->
 			<header>
 			
 				<!--start: Row -->
 				<div class="row">
 					
-				<!--start: Logo -->
-				<div class="logo span4">
-				  CLOUD<span class="sub">ST</span><span>Market</span>
-				</div>
-				<!--end: Logo -->
-					
+					<!--start: Logo -->
+					<div class="logo span4">
+							CLOUD<span class="sub">ST</span><span>Market</span>
+					</div>
+					<!--end: Logo -->
+
 					<!--start: Social Links -->
 					<div class="span8">
 						<div id="social-links">
@@ -142,13 +145,13 @@
             				<span class="icon-bar"></span>
           				</a>
           				<div class="nav-collapse collapse">
-            				<ul class="nav">
-							  <li class="active"><a href="index">Home</a></li>
-							  <li><a href="markets">Prices and markets</a></li>
-							  <li><a href="community">Community</a></li>
-							  <li><a href="sources">Sources</a></li>
-							  <li><a href="about">About</a></li>
-							  <li><a href="contact">Contact</a></li>
+							<ul class="nav">
+								<li class="active"><a href="index">Home</a></li>
+								<li><a href="markets">Prices and markets</a></li>
+								<li><a href="community">Community</a></li>
+								<li><a href="sources">Sources</a></li>
+								<li><a href="about">About</a></li>
+								<li><a href="contact">Contact</a></li>
 							</ul>
           				</div>
         			</div>
@@ -162,97 +165,125 @@
 		<!--start: Container -->
     	<div class="container">
 
+			<!-- start: Row -->
+			<div class="row">
+				<div class="span12">
+					<div class="hero-unit hidden-phone">
+						<p>Welcome to CloudStreet Market, the educational platform.</p>
+					</div>
+				</div>
+				<div class="span5">
+			
+			
+					<div id="landingGraphContainerAndTools">
+							<div id='landingGraphContainer' ng-controller="homeFinancialGraphController">
+								<select class="form-control centeredElementBox">
+									<option value="${dailyMarketActivity.marketId}"> ${dailyMarketActivity.marketShortName}</option>
+								</select> 
+							</div>
+	
+							<div id='tableMarketPrices'>		
+									<script>
+										var dailyMarketsActivity = [];
+										var market;
+									</script>
+							
+									<c:forEach var="market" items="${dailyMarketsActivity}">
+										<script>
+											market = {};
+											market.marketShortName = '${market.marketShortName}';
+											market.latestValue = (${market.latestValue}).toFixed(2);
+											market.latestChange = (${market.latestChange}*100).toFixed(2);
+											dailyMarketsActivity.push(market);
+										</script>
+								 	</c:forEach>
+								 
+									<div>
+										<table class="table table-hover table-condensed table-bordered table-striped" data-ng-controller='homeFinancialTableController'>
+											<thead>
+												<tr>
+													<th>Index</th>
+													<th>Value</th>
+													<th>Change</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr data-ng-repeat="value in financialMarkets">
+													<td>{{value.marketShortName}}</td>
+													<td style="text-align:right">{{value.latestValue}}</td>
+													<td class='{{value.style}}' style="text-align:right"><strong>{{value.latestChange}}%</strong></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+							</div>	
+	
+					</div>
+				</div>
+				<div class="span7">
 
+					<div id="divRss3">
+						<ul class="feedEkList" data-ng-controller='homeCommunityActivityController'>
+					
+							  <script>
+									var userActivities = [];
+									var userActivity;
+							  </script>
+									
+						      <c:forEach var="activity" items="${recentUserActivity}">
+								  <script>
+										userActivity = {};
+										userActivity.userAction = '${activity.userAction}';
+										userActivity.urlProfilePicture = '${activity.urlProfilePicture}';
+										userActivity.userName = '${activity.userName}';
+										userActivity.urlProfilePicture = '${activity.urlProfilePicture}';
+										userActivity.date = '<fmt:formatDate value="${activity.date}" pattern="dd/MM/yyyy hh:mm aaa"/>';
+										userActivity.userActionPresentTense = '${activity.userAction.presentTense}';
+										userActivity.amount = ${activity.amount};
+										userActivity.valueShortId = '${activity.valueShortId}';
+										userActivity.price = (${activity.price}).toFixed(2);
+										userActivities.push(userActivity);
+								  </script>
+						      </c:forEach>
+							      
+							  <li data-ng-repeat="value in communityActivities">
+									<div class="itemTitle">
+										<div class="listUserIco {{value.defaultProfileImage}}">
+											<img ng-if="value.urlProfilePicture" src='{{value.urlProfilePicture}}'>
+										</div>
+										<span class="ico-white {{value.iconDirection}} listActionIco"></span>
+						
+										<a href="#">{{value.userName}}</a> 
+										{{value.userActionPresentTense}} {{value.amount}} 
+										<a href="#">{{value.valueShortId}}</a> at {{value.price}}
+										<p class="itemDate">{{value.date}}</p>
+									</div>
+							  </li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+			<!-- end: Row -->
       		
-			<hr>
+			<hr class="hidden-phone">
 		
 			<!-- start Clients List -->	
-			<div class="clients-carousel">
+			<div class="clients-carousel hidden-phone">
 		
 				<ul class="slides clients">
 					<li><img src="img/logos/1.png" alt=""/></li>
-					<li><img src="img/logos/2.png" alt=""/></li>	
-					<li><img src="img/logos/3.png" alt=""/></li>
+					<li><img src="img/logos/2.png" alt=""/></li>
+					<li><img src="img/logos/3.png" alt=""/></li>	
 					<li><img src="img/logos/4.png" alt=""/></li>
 					<li><img src="img/logos/5.png" alt=""/></li>
 					<li><img src="img/logos/6.png" alt=""/></li>
-					<li><img src="img/logos/7.png" alt=""/></li>
-					<li><img src="img/logos/8.png" alt=""/></li>
-					<li><img src="img/logos/9.png" alt=""/></li>
-					<li><img src="img/logos/10.png" alt=""/></li>		
 				</ul>
 		
 			</div>
 			<!-- end Clients List -->
-		     <!-- start: Row -->
-      		<div class="row"></div>
-			<!-- end: Row -->
-			<hr>
-			
-			<!-- start: Row -->
-			<div class="row">
-				
-				<!-- start: Icon Boxes -->
-				<div class="icons-box-vert-container">
-
-					<!-- start: Icon Box Start -->
-					<div class="span6">
-						<div class="icons-box-vert">
-							<i class="ico-ok ico-color circle-color big"></i>
-							<div class="icons-box-vert-info">
-								<h3>Easy to use</h3>
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div>
-					<!-- end: Icon Box-->
-
-					<!-- start: Icon Box Start -->
-					<div class="span6">
-						<div class="icons-box-vert">
-							<i class="ico-cup  ico-white circle-color-full big-color"></i>
-							<div class="icons-box-vert-info">
-								<h3>Best choice</h3>
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div>
-					<!-- end: Icon Box -->
-
-					<!-- start: Icon Box Start -->
-					<div class="span6">
-						<div class="icons-box-vert">
-							<i class="ico-ipad ico-color circle-color big"></i>
-							<div class="icons-box-vert-info">
-								<h3>Fully Responsive</h3>
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div>
-					<!-- end: Icon Box -->
-
-					<!-- start: Icon Box Start -->
-					<div class="span6">
-						<div class="icons-box-vert">
-							<i class="ico-thumbs-up  ico-white circle-color-full big-color"></i>
-							<div class="icons-box-vert-info">
-								<h3>Social Network</h3>
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div>
-					<!-- end: Icon Box -->
-
-				</div>
-				<!-- end: Icon Boxes -->
-				<div class="clear"></div>
-			</div>
-			<!-- end: Row -->
-			
+		
 			<hr>
 			
 		</div>
@@ -262,44 +293,52 @@
     	<div class="container">		
 
       		<!-- start: Footer Menu -->
-				<div id="footer-menu" class="hidden-tablet hidden-phone">
-				  <!-- start: Container -->
-				  <div class="container">
-				    <!-- start: Row -->
-				    <div class="row">
-				      <!-- start: Footer Menu Logo -->
-				      <div class="span1">
-				      <div class="logoSmall">CLOUD<span class="sub">ST</span><span>M!</span>
-				        </div>
-				        </div>
-				      <!-- end: Footer Menu Logo -->
-				      <!-- start: Footer Menu Links-->
-				      <div class="span10" >
-				      <div id="footer-menu-links">
-				      <ul id="footer-nav" style="margin-left:35pt;">
-				        <li><a href="index">Home</a></li>
-				        <li><a href="markets">Prices and markets</a></li>
-				      <li><a href="community">Community</a></li>
-				        <li><a href="sources">Sources</a></li>
-				        <li><a href="about">About</a></li>
-				        <li><a href="contact">Contact</a></li>
-				        </ul>
-				        </div>
-				        </div>
-				        <!-- end: Footer Menu Links-->
-				        <!-- start: Footer Menu Back To Top -->
-				        <div class="span1">
-				        <div id="footer-menu-back-to-top">
-				          <a href="#"></a>
-				          </div>
-				       </div>
-				        <!-- end: Footer Menu Back To Top -->
-				    </div>
-				    <!-- end: Row -->
-				    </div>
-				  <!-- end: Container  -->	
-				</div>	
-				<!-- end: Footer Menu -->
+			<div id="footer-menu" class="hidden-tablet hidden-phone">
+
+				<!-- start: Container -->
+				<div class="container">
+				
+					<!-- start: Row -->
+					<div class="row">
+
+						<!-- start: Footer Menu Logo -->
+						<div class="span1">
+							<div class="logoSmall">
+								CLOUD<span class="sub">ST</span><span>M!</span>
+							</div>
+						</div>
+
+						<!-- end: Footer Menu Logo -->					
+						<!-- start: Footer Menu Links-->
+						<div class="span10">
+								<div id="footer-menu-links">
+									<ul id="footer-nav" style="margin-left:35pt;">
+										<li><a href="index">Home</a></li>
+										<li><a href="markets">Prices and markets</a></li>
+										<li><a href="community">Community</a></li>
+										<li><a href="sources">Sources</a></li>
+										<li><a href="about">About</a></li>
+										<li><a href="contact">Contact</a></li>
+									</ul>
+								</div>
+						</div>
+						<!-- end: Footer Menu Links-->
+						<!-- start: Footer Menu Back To Top -->
+						<div class="span1">
+							<div id="footer-menu-back-to-top">
+								<a href="#"></a>
+							</div>
+						</div>
+						<!-- end: Footer Menu Back To Top -->
+
+					</div>
+					<!-- end: Row -->
+				
+				</div>
+				<!-- end: Container  -->	
+
+			</div>	
+			<!-- end: Footer Menu -->
 
 			<!-- start: Footer -->
 			<div id="footer">
@@ -322,15 +361,14 @@
 						<!-- end: About -->
 
 						<!-- start: Leaderboard -->
-							<div class="span3">
-							  <h3>Leaderboard</h3>
-							  <div class="flickr-widget">
-							    <script type="text/javascript" src=""></script>
-							    <div class="clear"></div>
-							  </div>
-							</div>
-							<!-- end: Leaderboard -->
-
+						<div class="span3">
+						<h3>Leaderboard</h3>
+						<div class="flickr-widget">
+						<script type="text/javascript" src=""></script>
+						<div class="clear"></div>
+						</div>
+						</div>
+						<!-- end: Leaderboard -->
 				
 						<div class="span6">
 					
@@ -423,31 +461,45 @@
 	</div>
 	<!-- end: Wrapper  -->
 
-
 	<!-- start: Copyright -->
 	<div id="copyright">
-	
 		<!-- start: Container -->
 		<div class="container">
-		
-				<p>
-					&copy; 2013, creativeLabs. <a href="http://bootstrapmaster.com" alt="Bootstrap Themes">Bootstrap Themes</a> Designed by BootstrapMaster in Poland <img src="img/poland.png" alt="Poland" style="margin-top:-4px">
-				</p>
-	
+	<p><a href="http://bootstrapmaster.com" alt="Bootstrap Themes">Bootstrap Themes</a> by BootstrapMaster, thanks</p>
 		</div>
 		<!-- end: Container  -->
-		
 	</div>	
 	<!-- end: Copyright -->
+	
+	<!-- start: Javascript -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="js/jquery-1.8.2.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/flexslider.js"></script>
+	<script src="js/carousel.js"></script>
+	<script def src="js/custom.js"></script>
+	<script src="js/FeedEk.js"></script>
+	<script src="js/raphael.js"></script>
+	<script src="js/morris.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	
+	<script>
+		var financial_data = [];
+		<c:forEach var="dailySnapshot" items="${dailyMarketActivity.values}">
+			financial_data.push({"period": '<c:out value="${dailySnapshot.key}"/>', "index": <c:out value='${dailySnapshot.value}'/>});
+		</c:forEach>
+	</script>
 
-<!-- start: Java Script -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery-1.8.2.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/flexslider.js"></script>
-<script src="js/carousel.js"></script>
-<script def src="js/custom.js"></script>
-<!-- end: Java Script -->
+	<script>
+		var cloudStreetMarketApp = angular.module('cloudStreetMarketApp', []);
+		var tmpYmax = <c:out value="${dailyMarketActivity.maxValue}"/>;
+		var tmpYmin = <c:out value="${dailyMarketActivity.minValue}"/>;
+	</script>
+	
+	<script src="js/home_financial_graph.js"></script>
+	<script src="js/home_financial_table.js"></script>
+	<script src="js/home_community_activity.js"></script>
+	<!-- end: Javascript -->
 
 </body>
 </html>

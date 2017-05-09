@@ -11638,3 +11638,21 @@ cloudstreetmarket-core hasModuleCoreNature:true, isFlexible:true
   - has Utility Module facet
   - has Java 1.8 facet
 
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2017-05-09 18:38:09.395
+!MESSAGE No repository found at http://spring.io/tools/sts/all.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2017-05-09 18:39:04.135
+!MESSAGE No repository found at http://spring.io/tools/sts/all%0A%0AExcerpt%20From:%20Kunjumohamed,%20Shameer.%20“Spring%20MVC:%20Designing%20Real-World%20Web%20Applications.”%20iBooks..
+
+!ENTRY org.eclipse.jface.text 2 0 2017-05-09 20:32:36.627
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-05-09 20:32:36.627
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-05-09 20:32:36.649
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-05-09 20:32:36.649
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
