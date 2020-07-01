@@ -11,7 +11,7 @@
 		<zipcloud.version>0.0.1-SNAPSHOT</zipcloud.version>
 		<csm.group.id>edu.zipcloud.cloudstreetmarket</csm.group.id>
 		<spring.version>5.0.0.BUILD-SNAPSHOT</spring.version>
-		<log4j.version>2.8.2</log4j.version>
+		<log4j.version>2.13.3</log4j.version>
 		<slf4j.version>1.7.25</slf4j.version>
 		<jstl.version>1.2</jstl.version>
 		<jsp-api.version>2.2</jsp-api.version>
